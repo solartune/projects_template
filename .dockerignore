@@ -1,0 +1,11 @@
+*.egg-info
+*.pyc
+.coverage
+htmlcov/
+*.pid
+
+*.egg-info
+*.pyc
+.coverage
+htmlcov/
+*.pid
