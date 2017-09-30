@@ -10,11 +10,11 @@ networks:
 services:
   postgresql:
     image: postgres:9.6
-    hostname: postgresql-placeholder
+    hostname: placeholder-postgresql
     networks:
       st_network:
         aliases:
-          - postgresql-placeholder
+          - placeholder-postgresql
     command: postgres -c max_connections=300
     environment:
       - POSTGRES_DB=placeholder
@@ -33,19 +33,19 @@ services:
     environment:
       - DB_NAME=placeholder
       - DB_USER=placeholder
-      - DB_HOST=postgresql-placeholder
+      - DB_HOST=placeholder-postgresql
       - DB_PASSWORD=placeholder
       - DB_PORT=5432
       - DEBUG='true'
     restart: unless-stopped
-    hostname: placeholder
+    hostname: placeholder-app
     networks:
       infra_default:
         aliases:
-          - placeholder
+          - placeholder-app
       st_network:
         aliases:
-          - placeholder
+          - placeholder-app
     ports:
       - 8000:8000
     depends_on:
