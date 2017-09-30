@@ -5,4 +5,5 @@ htmlcov/
 notes/
 *.pid
 node_modules/
-project/static/
+static_root
+media_root
