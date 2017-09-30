@@ -10,8 +10,6 @@ RUN apt-get install -y build-essential libssl-dev  g++ \
 
 # RUN npm install
 
-# RUN npm install gulp -g
-
 WORKDIR /usr/src/app
 
 COPY requirements.txt /usr/src/app/

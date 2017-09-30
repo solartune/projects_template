@@ -38,7 +38,7 @@ services:
       - DB_PORT=5432
       - DEBUG='true'
     restart: unless-stopped
-    hostname: st
+    hostname: placeholder
     networks:
       infra_default:
         aliases:
